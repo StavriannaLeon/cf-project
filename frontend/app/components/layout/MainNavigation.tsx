@@ -1,36 +1,26 @@
 "use client";
 
-import FlyoutMenu from './FlyoutMenu';
 import Link from 'next/link';
+import { TagIcon } from '@heroicons/react/24/outline';
 
 const MainNavigation = () => {
   return (
-    <div className="flex items-center gap-x-8">
+    <div className="hidden lg:flex lg:items-center lg:gap-x-8">
         <Link href="/" className="text-sm font-semibold leading-6 text-white">
             Home
         </Link>
-      <FlyoutMenu title="Women">
-        {/* Placeholder content for Women's menu */}
-        <Link href="/women/clothing" className="text-sm font-semibold leading-6 text-gray-900">Clothing</Link>
-        <Link href="/women/shoes" className="text-sm font-semibold leading-6 text-gray-900">Shoes</Link>
-        <Link href="/women/accessories" className="text-sm font-semibold leading-6 text-gray-900">Accessories</Link>
-      </FlyoutMenu>
-
-      <FlyoutMenu title="Men">
-        {/* Placeholder content for Men's menu */}
-        <Link href="/men/clothing" className="text-sm font-semibold leading-6 text-gray-900">Clothing</Link>
-        <Link href="/men/shoes" className="text-sm font-semibold leading-6 text-gray-900">Shoes</Link>
-        <Link href="/men/accessories" className="text-sm font-semibold leading-6 text-gray-900">Accessories</Link>
-      </FlyoutMenu>
-
-      <FlyoutMenu title="Children">
-        {/* Placeholder content for Children's menu */}
-        <Link href="/children/clothing" className="text-sm font-semibold leading-6 text-gray-900">Clothing</Link>
-        <Link href="/children/shoes" className="text-sm font-semibold leading-6 text-gray-900">Shoes</Link>
-      </FlyoutMenu>
-
-      <Link href="/sales" className="text-sm font-semibold leading-6 text-white">
-        Sales
+        <Link href="/women" className="text-sm font-semibold leading-6 text-white">
+            Women
+        </Link>
+        <Link href="/men" className="text-sm font-semibold leading-6 text-white">
+            Men
+        </Link>
+        <Link href="/kids" className="text-sm font-semibold leading-6 text-white">
+            Kids
+        </Link>
+      <Link href="/sales" className="flex items-center space-x-1 text-sm font-semibold leading-6 text-white">
+        <TagIcon className="h-5 w-5" />
+        <span>Sales</span>
       </Link>
     </div>
   );
