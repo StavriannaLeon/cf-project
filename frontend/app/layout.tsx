@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import { ModalProvider } from "./contexts/ModalContext";
+import HandleAuthRedirect from "./components/HandleAuthRedirect";
 import AuthModal from "./components/features/auth/AuthModal";
 
 const geistSans = Geist({
@@ -36,6 +37,7 @@ export default function RootLayout({
           <main className="grow">{children}</main>
           <Footer />
           <AuthModal />
+          <HandleAuthRedirect />
         </ModalProvider>
       </body>
     </html>
