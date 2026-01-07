@@ -11,11 +11,12 @@ const Searchbar = () => {
       <input
         type="text"
         placeholder="Search for products..."
-        className="block w-full pl-10 pr-3 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-gray-700 text-gray-200 placeholder-gray-400"
+        onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #C16E3A'}
+        onBlur={(e) => e.target.style.boxShadow = 'none'}
+        className="block w-full pl-10 pr-3 py-2 rounded-full border border-gray-300 focus:outline-none bg-[#4a4a4a] text-gray-200 placeholder-gray-400"
       />
     </div>
   );
 };
 
 export default Searchbar;
-

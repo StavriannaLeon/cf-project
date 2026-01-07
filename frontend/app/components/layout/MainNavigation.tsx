@@ -21,7 +21,7 @@ const MainNavigation = () => {
 
         <FlyoutMenu title="Women">
             {mainLinks('women').filter(item => item.name !== 'Accessories').map((item) => (
-                <div key={item.name} className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                <div key={item.name} className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-100">
                     <div className="flex-auto">
                         <Link href={item.href} className="block font-semibold text-gray-900">
                             {item.name}
@@ -29,14 +29,14 @@ const MainNavigation = () => {
                     </div>
                 </div>
             ))}
-            <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+            <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-100">
                 <div className="flex-auto">
                     <Link href="/women/accessories" className="block font-semibold text-gray-900">
                         Accessories
                     </Link>
                 </div>
             </div>
-            <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+            <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-100">
                 <div className="flex-auto">
                     <Link href="/women/beauty" className="block font-semibold text-gray-900">
                         Beauty
@@ -47,7 +47,7 @@ const MainNavigation = () => {
 
         <FlyoutMenu title="Men">
             {mainLinks('men').filter(item => item.name !== 'Accessories').map((item) => (
-                <div key={item.name} className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                <div key={item.name} className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-100">
                     <div className="flex-auto">
                         <Link href={item.href} className="block font-semibold text-gray-900">
                             {item.name}
@@ -58,21 +58,21 @@ const MainNavigation = () => {
         </FlyoutMenu>
 
         <FlyoutMenu title="Kids">
-             <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+             <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-100">
                 <div className="flex-auto">
                     <Link href="/kids/boys" className="block font-semibold text-gray-900">
                         Boys
                     </Link>
                 </div>
             </div>
-            <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+            <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-100">
                 <div className="flex-auto">
                     <Link href="/kids/girls" className="block font-semibold text-gray-900">
                         Girls
                     </Link>
                 </div>
             </div>
-            <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+            <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-100">
                 <div className="flex-auto">
                     <Link href="/kids/baby" className="block font-semibold text-gray-900">
                         Baby

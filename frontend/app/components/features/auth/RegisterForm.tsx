@@ -14,7 +14,9 @@ const RegisterForm = () => {
           type="email"
           id="email"
           name="email"
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #C16E3A'}
+          onBlur={(e) => e.target.style.boxShadow = 'none'}
+          className="mt-1 block w-full px-3 py-2 text-sm border border-gray-300 rounded-xl shadow-sm focus:outline-none"
         />
       </div>
       <div>
@@ -28,7 +30,9 @@ const RegisterForm = () => {
           type="password"
           id="password"
           name="password"
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #C16E3A'}
+          onBlur={(e) => e.target.style.boxShadow = 'none'}
+          className="mt-1 block w-full px-3 py-2 text-sm border border-gray-300 rounded-xl shadow-sm focus:outline-none"
         />
       </div>
       <div>
@@ -42,12 +46,14 @@ const RegisterForm = () => {
           type="password"
           id="confirm-password"
           name="confirm-password"
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+          onFocus={(e) => e.target.style.boxShadow = '0 0 0 2px #C16E3A'}
+          onBlur={(e) => e.target.style.boxShadow = 'none'}
+          className="mt-1 block w-full px-3 py-2 text-sm border border-gray-300 rounded-xl shadow-sm focus:outline-none"
         />
       </div>
       <button
         type="submit"
-        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="w-full flex justify-center py-2 px-3 border border-transparent rounded-xl shadow-sm text-sm font-medium text-white bg-[var(--accent)] hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--accent)]"
       >
         Create Account
       </button>

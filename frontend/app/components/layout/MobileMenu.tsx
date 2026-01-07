@@ -44,16 +44,16 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-700">
                     <div className="space-y-2 py-6">
-                        <Link href="/" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700" onClick={onClose}>Home</Link>
+                        <Link href="/" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-[#4a4a4a]" onClick={onClose}>Home</Link>
                         
                         {Object.keys(navigation).map((key) => (
-                            <button key={key} onClick={() => setActiveMenu(key as keyof typeof navigation)} className="w-full text-left -mx-3 flex justify-between items-center rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700 capitalize">
+                            <button key={key} onClick={() => setActiveMenu(key as keyof typeof navigation)} className="w-full text-left -mx-3 flex justify-between items-center rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-[#4a4a4a] capitalize">
                                 <span>{key}</span>
                                 <ChevronRightIcon className="h-5 w-5" />
                             </button>
                         ))}
                         
-                        <Link href="/sales" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700" onClick={onClose}>Sales</Link>
+                        <Link href="/sales" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-[#4a4a4a]" onClick={onClose}>Sales</Link>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     <div className="-my-6 divide-y divide-gray-700">
                          <div className="space-y-2 py-6">
                             {subMenuItems.map((item) => (
-                                <Link key={item.name} href={item.href} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-700" onClick={onClose}>
+                                <Link key={item.name} href={item.href} className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-[#4a4a4a]" onClick={onClose}>
                                     {item.name}
                                 </Link>
                             ))}
@@ -90,7 +90,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
     if (!isOpen) return null;
 
     return (
-        <div className="lg:hidden fixed inset-0 bg-gray-800 z-50 p-6" id="mobile-menu">
+        <div className="lg:hidden fixed inset-0 bg-[var(--navbar-background)] z-50 p-6" id="mobile-menu">
             {activeMenu ? renderSubMenu() : renderMainMenu()}
         </div>
     );

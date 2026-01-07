@@ -16,7 +16,7 @@ const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800 text-white p-4">
+    <nav className="bg-[var(--navbar-background)] text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Left Side & Main Nav */}
         <div className="flex items-center space-x-8">

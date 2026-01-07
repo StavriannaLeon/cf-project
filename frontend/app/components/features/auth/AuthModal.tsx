@@ -19,25 +19,25 @@ const AuthModal = () => {
     >
       <div
         id="modal-content"
-        className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md"
+        className="bg-white p-8 rounded-xl shadow-xl w-full max-w-md"
         onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
       >
         <div className="flex justify-end">
           <button onClick={closeModal} className="text-2xl font-bold">&times;</button>
         </div>
 
-        <div className="flex border-b mb-4">
-          <button
-            onClick={() => setModalMode('login')}
-            className={`py-2 px-4 text-gray-600 ${modalMode === 'login' ? 'border-b-2 border-indigo-600 font-semibold text-indigo-600' : ''}`}
-          >
-            Sign In
+        <div className="flex mb-4">
+          <button onClick={() => setModalMode('login')} className="flex-1 py-2 px-4 text-center">
+            <span className={modalMode === 'login' ? 'font-semibold text-[var(--accent)]' : 'text-gray-600'}>
+              Sign In
+            </span>
+            <div className={`mt-1 h-0.5 bg-[var(--accent)] transition-all duration-300 ${modalMode === 'login' ? 'w-full' : 'w-0'}`}></div>
           </button>
-          <button
-            onClick={() => setModalMode('register')}
-            className={`py-2 px-4 text-gray-600 ${modalMode === 'register' ? 'border-b-2 border-indigo-600 font-semibold text-indigo-600' : ''}`}
-          >
-            Create Account
+          <button onClick={() => setModalMode('register')} className="flex-1 py-2 px-4 text-center">
+            <span className={modalMode === 'register' ? 'font-semibold text-[var(--accent)]' : 'text-gray-600'}>
+                Create Account
+            </span>
+            <div className={`mt-1 h-0.5 bg-[var(--accent)] transition-all duration-300 ${modalMode === 'register' ? 'w-full' : 'w-0'}`}></div>
           </button>
         </div>
 
